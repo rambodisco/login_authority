@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Employee</title>
+</head>
+<body>
+
+        <h1> Add an Emplyoee</h1>
+
+        <a href="/index"> Dashboard </a><br><br>
+        <a href="/emp-list"> List Employee </a><br><br>
+
+
+
+        <font color="green"> {{message}}</font>
+
+        {% for item in emessage %}
+           <font color="red"> {{item}}</font><br>
+        {% endfor %}
+
+        <form action="/emp-save" method="post">
+            Employee ID:<input type="text" name="eid"><br><br>
+            Employee Name:<input type="text" name="ename"><br><br>
+            Employee Email:<input type="text" name="email"><br><br>
+            Employee Role:<select name="erole">
+                                <option value="SE">Software Engineer</option>
+                                <option value="ME">Mechanical Engineer</option>
+                                <option value="CE">Civil Engineer</option>
+                                <option value="EE">Electrical Engineer</option>
+                          </select><br><br>
+            Employee Salary:<input type="text" name="esal"><br><br>
+            Employee Dept:<input type="text" name="edept"><br><br>
+            <input type="submit">
+        </form>
+        <br><br><br><br><br><br><br><br>
+
+        <a href="/">log out </a>
+
+</body>
+</html>

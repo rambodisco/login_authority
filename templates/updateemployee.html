@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Update Employee</title>
+</head>
+<body>
+
+
+        <h1> Add an Emplyoee</h1>
+
+        <a href="/"> Home </a><br><br>
+        <a href="/emp-list"> List Employee </a><br><br>
+
+        <form action="/emp-edit" method="post">
+                Employee ID:<input type="text" name="eid" readonly value="{{record.id}}"><br><br>
+                Employee Name:<input type="text" name="ename" value="{{record.name}}"><br><br>
+                Employee Email:<input type="text" name="email" value="{{record.email}}"><br><br>
+
+<!--                Employee Gender:<input type="radio" value='M' {% if record.gender=="M" %} checked {% endif %}> Male <br><br>-->
+<!--                Employee Gender:<input type="radio" value='F' {% if record.gender=="F" %} checked {% endif %}> Female <br><br>-->
+
+<!--                Employee Skills:-->
+<!--                                <input type="checkbox" value='PY' {% if record.skill=="PY" %} checked {% endif %}> Python <br>-->
+<!--                                <input type="checkbox" value='JD' {% if record.skill=="JD" %} checked {% endif %}> Java <br>-->
+<!--                                <input type="checkbox" value='NG' {% if record.skill=="NG" %} checked {% endif %}> Spring <br>-->
+<!--                                <input type="checkbox" value='SP' {% if record.skill=="SP" %} checked {% endif %}> Angular <br>-->
+<!--                                <input type="checkbox" value='ORM' {% if record.skill=="ORM" %} checked {% endif %}> ORM <br>-->
+
+                Employee Role:<select name="erole">
+                                    <option value="None">---select---</option>
+                                    <option value="SE" {% if record.role=="SE" %} selected {% endif %}>Software Engineer</option>
+                                    <option value="ME"{% if record.role=="ME" %} selected {% endif %}>Mechanical Engineer</option>
+                                    <option value="CE" {% if record.role=="CE" %} selected {% endif %}>Civil Engineer</option>
+                                    <option value="EE" {% if record.role=="EE" %} selected {% endif %}>Electrical Engineer</option>
+                              </select><br><br>
+                Employee Salary:<input type="text" name="esal" value="{{record.salary}}"><br><br>
+                Employee Dept:<input type="text" name="edept" value="{{record.dept}}"><br><br>
+                <input type="submit">
+
+
+
+            </form>
+
+</body>
+</html>

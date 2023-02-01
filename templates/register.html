@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register Page</title>
+</head>
+<body>
+
+
+        <h1>Register</h1>
+
+        <a href="/"> Home </a><br><br>
+
+        <font color="green"> {{message}} </font><br>
+
+        {% for error in errors%}
+        <font color="red"> {{error}}</font><br>
+        {% endfor %}
+
+        <form action="/register" method="post">
+
+            User Name : <input type="text" name="username"><br><br>
+            Email : <input type="text" name="email"><br><br>
+            Password : <input type="text" name="password"><br><br>
+            <input type="submit">
+
+        </form>
+
+
+</body>
+</html>
